@@ -1,3 +1,11 @@
 <h1>
-  {{title}}
+    {{title}}
 </h1>
+
+<!--ANGULAR router-->
+<router-outlet></router-outlet>
+
+<!--ANGULARJS router-->
+<div ng-view></div>
+
+<ng1-home [ng1Data]="ng2Data" (ng1Event)="ng2Fire()"></ng1-home>
