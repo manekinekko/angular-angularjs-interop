@@ -1,4 +1,17 @@
-import { Directive, ElementRef, Injector, Input, Output, EventEmitter} from '@angular/core';
+import { 
+  Directive, 
+  ElementRef, 
+  Injector, 
+  Input, 
+  Output, 
+  EventEmitter, 
+  SimpleChanges,
+  OnInit,
+  OnChanges,
+  DoCheck,
+  OnDestroy,
+  OpaqueToken
+} from '@angular/core';
 import { UpgradeComponent } from '@angular/upgrade/static';
 
 /**
@@ -11,14 +24,20 @@ import { UpgradeComponent } from '@angular/upgrade/static';
 @Directive({
   selector: 'ng1-home'
 })
-export class HomeDirective extends UpgradeComponent {
+export class HomeDirective extends UpgradeComponent implements OnInit, OnChanges, DoCheck,
+    OnDestroy {
   
   @Input('ng1Data') data: any;
   @Output('ng1Event') event: EventEmitter<any>;
 
   constructor(elementRef: ElementRef, injector: Injector) {
 
-    // AngularJs component "ng1AppHome" must exist!
-    super('ng1-home', elementRef, injector);
+    // AngularJs component "ng1Home" must exist!
+    super('ng1Home', elementRef, injector);
   }
+
+  ngOnInit() { super.ngOnInit(); }
+  ngOnChanges(changes: SimpleChanges) { super.ngOnChanges(changes); }
+  ngDoCheck() { super.ngDoCheck(); }
+  ngOnDestroy() { super.ngOnDestroy(); }
 }

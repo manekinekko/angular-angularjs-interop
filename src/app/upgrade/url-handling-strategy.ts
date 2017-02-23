@@ -6,7 +6,8 @@ export class HybridUrlHandlingStrategy implements UrlHandlingStrategy {
   
   // use only process the `/ng2` url
   shouldProcessUrl(url: UrlTree) { 
-    return url.toString().startsWith('/ng2/');
+    // return url.toString().startsWith('/ng2');
+    return true;
   }
   extract(url: UrlTree) { 
     return url;

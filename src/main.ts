@@ -1,20 +1,15 @@
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { UpgradeModule } from '@angular/upgrade/static';
-
 import { AppModule } from './app/app.module';
 import { Ng1AppModule } from './app/ng1.app';
-import { environment } from './environments/environment';
+import { AppComponent } from './app/app.component';
+import { downgradeNg2RootComponentToNg1 } from './main.ng1';
 
-platformBrowserDynamic().bootstrapModule(AppModule)
-.then(platformRef => {
-  
-  const upgrade = platformRef.injector.get(UpgradeModule) as UpgradeModule;
-  upgrade.bootstrap(document.body, [Ng1AppModule.name], {strictDi: true});
+import { enableProdMode } from '@angular/core';
+enableProdMode();
 
-  // const upgrade = (<any>platformRef.instance).upgrade;
-  // upgrade.bootstrap(document.body, ['yolo'], {strictDi: true});
-  // setUpLocationSync(upgrade);
-})
-// .catch( e => {
-//   console.error(e);
-// });
+// 1) bootstrap Angular Injector (ei. AppModule)
+platformBrowserDynamic().bootstrapModule(AppModule).then(platformRef => {
+
+  // 2) bootstrap AngularJs Injector and wire the two up.
+  downgradeNg2RootComponentToNg1(AppComponent).bootstrapModuleAngularJs(platformRef, Ng1AppModule);
+});
