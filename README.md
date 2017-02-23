@@ -8,4 +8,4 @@
 4) Bootstrap Angular Injector (IJ2)
 5) Bootstrap AngularJs Injector (IJ1)
 6) Wire IJ2 and IJ1 up
-7) 
+7) ROUTERS DO NOT WORK YET!!

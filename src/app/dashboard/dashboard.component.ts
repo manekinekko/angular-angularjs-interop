@@ -19,6 +19,7 @@ export class DashboardComponent implements OnInit {
   }
 
   ng2Fire(data: any) {
+    debugger;
     console.log(data);
   }
 

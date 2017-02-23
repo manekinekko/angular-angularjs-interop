@@ -17,13 +17,13 @@ export const downgradeNg2RootComponentToNg1 = (rootComponent) => {
       return new Promise( (res, rej) => {
 
         // get the upgrade module from Angular
-        const upgrade = platformRef.injector.get(UpgradeModule) as UpgradeModule;
+        const injector = platformRef.injector.get(UpgradeModule) as UpgradeModule;
 
         // use it to bootstrap AngularJs
-        upgrade.bootstrap(document.body, [Ng1AppModule.name], {strictDi: true});
+        injector.bootstrap(document.body, [Ng1AppModule.name], {strictDi: true});
 
         // sync up location and routings 
-        setUpLocationSync(upgrade);
+        // setUpLocationSync(upgrade);
         res();
 
       });

@@ -1,17 +1,23 @@
 import * as angular from 'angular';
 import 'angular-route';
 
-const yoloApp = angular.module('yolo-app', ['ngRoute'])
-.controller('HomeController', class HomeController {
-  works = 'home works';
+class HomeController {
+  ng1Data = {} as any;
   static $inject = ['Ng1Service'];
-  constructor(s) {
-    this.works = `${this.works} - ${s.foo()}`
+  constructor(service) {
+    this.ng1Data.foo = service.foo();
   }
-})
+  ng1Event(...args){}
+  fire() {
+    this.ng1Event({data: this.ng1Data});
+  }
+}
+
+const yoloApp = angular.module('yolo-app', [])
+.controller('HomeController', HomeController)
 .service('Ng1Service', class Ng1Service {
   foo() {
-    return 'from AngularJs';
+    return {message: 'from AngularJs'};
   }
 })
 .component('ng1Home', {
@@ -20,43 +26,29 @@ const yoloApp = angular.module('yolo-app', ['ngRoute'])
     ng1Event: '&'
   },
   template: `
-    {{ $ctrl.message }} {{ $ctrl.from }}
-    {{ $ctrl.data | json }}
-    <button ng-click="$ctrl.fire()">fire 🌶</button>
-  `,
-  controller: ['Ng1Service', (service) => {
-    this.message = 'Angular 1 Home Component';
-    this.from = service.foo();
-    this.fire = () => {
-      debugger;
-      this.data.more = 'Hello from AngularJs';
-      this.event(this.data);
-      console.log(this.data);
-    }
-  }]
+    {{ $ctrl.ng1Data | json }}
+    <button ng-click="$ctrl.fire()">fire 🌶</button>`,
+  controller: HomeController
 })
-// .config(['$locationProvider', ($locationProvider) => {
-// }]);
-
-// const yoloRoutes = angular.module('yolo-routes', ['ngRoute'])
-.config(['$routeProvider', '$locationProvider', ($routeProvider, $locationProvider) => {
+.config(['$locationProvider', ($locationProvider) => {
+// .config(['$routeProvider', '$locationProvider', ($routeProvider, $locationProvider) => {
     // $locationProvider.hashPrefix('😸');
     // $locationProvider.html5Mode({
     //   enabled: false,
     //   requireBase: false
     // });
 
-    $routeProvider
-        .when('/🌶', {
-            constroller: 'HomeController',
-            controllerAs: '$ctrl',
-            templateUrl: './ng1.home.html'
-        })
-        .when('/🥐', {
-            template: `
-              <button>Hola 🥐</button>
-            `
-        });
+    // $routeProvider
+    //     .when('/🌶', {
+    //         constroller: 'HomeController',
+    //         controllerAs: '$ctrl',
+    //         templateUrl: './ng1.home.html'
+    //     })
+    //     .when('/🥐', {
+    //         template: `
+    //           <button>Hola 🥐</button>
+    //         `
+    //     });
 }]);
 
 export const Ng1AppModule = angular.module('yolo-app');

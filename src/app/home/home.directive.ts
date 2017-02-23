@@ -24,18 +24,23 @@ import { UpgradeComponent } from '@angular/upgrade/static';
 @Directive({
   selector: 'ng1-home'
 })
-export class HomeDirective extends UpgradeComponent implements OnInit, OnChanges, DoCheck,
-    OnDestroy {
+export class HomeDirective extends UpgradeComponent implements OnInit, OnChanges, DoCheck, OnDestroy {
   
   @Input('ng1Data') data: any;
   @Output('ng1Event') event: EventEmitter<any>;
 
   constructor(elementRef: ElementRef, injector: Injector) {
-
+    
     // AngularJs component "ng1Home" must exist!
     super('ng1Home', elementRef, injector);
+
+    // don't forget to create an event emitter
+    this.event = new EventEmitter<any>();
+
+    //this.event.subscribe(_ => console.log(_));
   }
 
+  // implement all these life cycles for AOT
   ngOnInit() { super.ngOnInit(); }
   ngOnChanges(changes: SimpleChanges) { super.ngOnChanges(changes); }
   ngDoCheck() { super.ngDoCheck(); }
