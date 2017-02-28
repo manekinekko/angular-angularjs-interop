@@ -1,9 +1,0 @@
-:host,
-ng-transclude,
-ng1-date-picker,
-ng1-dashboard {
-    display: block;
-    padding: 10px;
-    margin: 10px;
-    border: 1px solid transparent;
-}
