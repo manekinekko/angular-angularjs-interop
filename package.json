@@ -8,7 +8,8 @@
         "test": "ng test",
         "lint": "ng lint",
         "e2e": "ng e2e",
-        "aot": "ngc -p src/tsconfig.json"
+        "aot": "ngc -p src/tsconfig.json",
+        "build": "ng build -bh /angular-angularjs-interop/"
     },
     "private": true,
     "dependencies": {

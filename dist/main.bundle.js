@@ -1,131 +1,6 @@
 webpackJsonp([1,5],{
 
-/***/ 158:
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(12)();
-// imports
-
-
-// module
-exports.push([module.i, ".block {\n    display: block;\n    padding: 10px;\n    margin: 10px;\n}", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ 159:
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(12)();
-// imports
-
-
-// module
-exports.push([module.i, ":host,\nng-transclude,\nng1-date-picker,\nng1-dashboard {\n    display: block;\n    padding: 10px;\n    margin: 10px;\n    border: 1px solid transparent;\n}", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ 160:
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(12)();
-// imports
-
-
-// module
-exports.push([module.i, "span {\n    padding: 2px 10px;\n    border-radius: 10px;\n    text-shadow: 1px 1px 1px white;\n    color: rgba(0, 0, 0, 0.7);\n}\n\n.ng2 {\n    background: rgba(243, 49, 112, 0.5);\n}\n\n.ng1 {\n    background: rgba(43, 195, 236, 0.5);\n}\n\n.ng-transclude {\n    background: rgba(246, 181, 0, 0.5);\n}", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ 161:
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(12)();
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ 162:
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(12)();
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ 170:
-/***/ (function(module, exports) {
-
-module.exports = "<h1>\n    Angular AngularJS Interop\n</h1>\n\n<a [routerLink]=\"['/home']\">home</a>\n<a [routerLink]=\"['/dash']\">Dashboard</a>\n\n<!-- @todo: ANGULARJS not working for now -->\n<!--<a href=\"#!/🌶\">AngularJs 🌶</a>\n<a href=\"#!/🥐\">AngularJs 🥐</a>-->\n\n<app-debug></app-debug>\n\n\n<!--ANGULAR router-->\n<router-outlet></router-outlet>\n\n<!--ANGULARJS router-->\n<!--<div ng-view></div>-->"
-
-/***/ }),
-
-/***/ 171:
-/***/ (function(module, exports) {
-
-module.exports = "<p>\n    dashboard home from angular (>=2)\n</p>\n\n\n<ng1-dashboard [ng1Data]=\"ng2Data\" (ng1Event)=\"ng2Fire($event)\">\n    <section>\n        <p>Dashboard from AngularJs (transcluded)</p>\n        <button (click)=\"sendRandomNg1Data()\">random data</button>\n        <pre>{{ ng1Data | json }}</pre>\n    </section>\n    <ng1-date-picker></ng1-date-picker>\n</ng1-dashboard>"
-
-/***/ }),
-
-/***/ 172:
-/***/ (function(module, exports) {
-
-module.exports = "<button (click)=\"toggle()\">{{ t }} contexts</button>\n<span class=\"ng2\">ng2</span>\n<span class=\"ng1\">ng1</span>\n<span class=\"ng-transclude\">ng-transclude</span>"
-
-/***/ }),
-
-/***/ 173:
-/***/ (function(module, exports) {
-
-module.exports = "<p>\n    home from angular (>=2)\n</p>"
-
-/***/ }),
-
-/***/ 174:
-/***/ (function(module, exports) {
-
-module.exports = "<p>\n  notfound works!\n</p>\n"
-
-/***/ }),
-
-/***/ 204:
+/***/ 100:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -135,13 +10,13 @@ module.exports = "<p>\n  notfound works!\n</p>\n"
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(97);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_upgrade_static__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_router__ = __webpack_require__(99);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(84);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__home_home_component__ = __webpack_require__(207);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__dashboard_dashboard_component__ = __webpack_require__(205);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__notfound_notfound_component__ = __webpack_require__(209);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__upgrade_dashboard_directive__ = __webpack_require__(210);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__upgrade_date_picker_directive__ = __webpack_require__(211);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__debug_debug_component__ = __webpack_require__(206);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(57);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__home_home_component__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__dashboard_dashboard_component__ = __webpack_require__(101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__notfound_notfound_component__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__upgrade_dashboard_directive__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__upgrade_date_picker_directive__ = __webpack_require__(107);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__debug_debug_component__ = __webpack_require__(102);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -214,7 +89,7 @@ AppModule = __decorate([
 
 /***/ }),
 
-/***/ 205:
+/***/ 101:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -256,8 +131,8 @@ var DashboardComponent = (function () {
 DashboardComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["b" /* Component */])({
         selector: 'app-dashboard',
-        template: __webpack_require__(171),
-        styles: [__webpack_require__(159)]
+        template: __webpack_require__(180),
+        styles: [__webpack_require__(168)]
     }),
     __metadata("design:paramtypes", [])
 ], DashboardComponent);
@@ -266,7 +141,7 @@ DashboardComponent = __decorate([
 
 /***/ }),
 
-/***/ 206:
+/***/ 102:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -365,8 +240,8 @@ var DebugComponent = (function () {
 DebugComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["b" /* Component */])({
         selector: 'app-debug',
-        template: __webpack_require__(172),
-        styles: [__webpack_require__(160)]
+        template: __webpack_require__(181),
+        styles: [__webpack_require__(169)]
     }),
     __metadata("design:paramtypes", [])
 ], DebugComponent);
@@ -375,7 +250,7 @@ DebugComponent = __decorate([
 
 /***/ }),
 
-/***/ 207:
+/***/ 103:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -401,8 +276,8 @@ var HomeComponent = (function () {
 HomeComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["b" /* Component */])({
         selector: 'app-home',
-        template: __webpack_require__(173),
-        styles: [__webpack_require__(161)]
+        template: __webpack_require__(182),
+        styles: [__webpack_require__(170)]
     }),
     __metadata("design:paramtypes", [])
 ], HomeComponent);
@@ -411,13 +286,13 @@ HomeComponent = __decorate([
 
 /***/ }),
 
-/***/ 208:
+/***/ 104:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_angular__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_angular__ = __webpack_require__(112);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_angular___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_angular__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular_route__ = __webpack_require__(101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular_route__ = __webpack_require__(110);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular_route___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_angular_route__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Ng1AppModule; });
 
@@ -504,7 +379,7 @@ var Ng1AppModule = __WEBPACK_IMPORTED_MODULE_0_angular__["module"]('yolo-app');
 
 /***/ }),
 
-/***/ 209:
+/***/ 105:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -530,8 +405,8 @@ var NotfoundComponent = (function () {
 NotfoundComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["b" /* Component */])({
         selector: 'app-notfound',
-        template: __webpack_require__(174),
-        styles: [__webpack_require__(162)]
+        template: __webpack_require__(183),
+        styles: [__webpack_require__(171)]
     }),
     __metadata("design:paramtypes", [])
 ], NotfoundComponent);
@@ -540,23 +415,18 @@ NotfoundComponent = __decorate([
 
 /***/ }),
 
-/***/ 210:
+/***/ 106:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_upgrade_static__ = __webpack_require__(19);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DashboardDirective; });
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
+var __extends = (this && this.__extends) || function (d, b) {
+    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+};
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -607,23 +477,18 @@ var _a, _b, _c;
 
 /***/ }),
 
-/***/ 211:
+/***/ 107:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_upgrade_static__ = __webpack_require__(19);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DatePickerDirective; });
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
+var __extends = (this && this.__extends) || function (d, b) {
+    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+};
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -668,7 +533,7 @@ var _a, _b;
 
 /***/ }),
 
-/***/ 212:
+/***/ 108:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -700,29 +565,140 @@ var downgradeNg2RootComponentToNg1 = function (rootComponent) {
 
 /***/ }),
 
+/***/ 167:
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(12)();
+// imports
+
+
+// module
+exports.push([module.i, ".block {\n    display: block;\n    padding: 10px;\n    margin: 10px;\n}", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ 168:
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(12)();
+// imports
+
+
+// module
+exports.push([module.i, ":host,\nng-transclude,\nng1-date-picker,\nng1-dashboard {\n    display: block;\n    padding: 10px;\n    margin: 10px;\n    border: 1px solid transparent;\n}", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ 169:
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(12)();
+// imports
+
+
+// module
+exports.push([module.i, "span {\n    padding: 2px 10px;\n    border-radius: 10px;\n    text-shadow: 1px 1px 1px white;\n    color: rgba(0, 0, 0, 0.7);\n}\n\n.ng2 {\n    background: rgba(243, 49, 112, 0.5);\n}\n\n.ng1 {\n    background: rgba(43, 195, 236, 0.5);\n}\n\n.ng-transclude {\n    background: rgba(246, 181, 0, 0.5);\n}", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ 170:
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(12)();
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ 171:
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(12)();
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ 179:
+/***/ (function(module, exports) {
+
+module.exports = "<h1>\n    Angular AngularJS Interop\n</h1>\n\n<a [routerLink]=\"['/home']\">home</a>\n<a [routerLink]=\"['/dash']\">Dashboard</a>\n\n<!-- @todo: ANGULARJS not working for now -->\n<!--<a href=\"#!/🌶\">AngularJs 🌶</a>\n<a href=\"#!/🥐\">AngularJs 🥐</a>-->\n\n<app-debug></app-debug>\n\n\n<!--ANGULAR router-->\n<router-outlet></router-outlet>\n\n<!--ANGULARJS router-->\n<!--<div ng-view></div>-->"
+
+/***/ }),
+
+/***/ 180:
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n    dashboard home from angular (>=2)\n</p>\n\n\n<ng1-dashboard [ng1Data]=\"ng2Data\" (ng1Event)=\"ng2Fire($event)\">\n    <section>\n        <p>Dashboard from AngularJs (transcluded)</p>\n        <button (click)=\"sendRandomNg1Data()\">random data</button>\n        <pre>{{ ng1Data | json }}</pre>\n    </section>\n    <ng1-date-picker></ng1-date-picker>\n</ng1-dashboard>"
+
+/***/ }),
+
+/***/ 181:
+/***/ (function(module, exports) {
+
+module.exports = "<button (click)=\"toggle()\">{{ t }} contexts</button>\n<span class=\"ng2\">ng2</span>\n<span class=\"ng1\">ng1</span>\n<span class=\"ng-transclude\">ng-transclude</span>"
+
+/***/ }),
+
+/***/ 182:
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n    home from angular (>=2)\n</p>"
+
+/***/ }),
+
+/***/ 183:
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  notfound works!\n</p>\n"
+
+/***/ }),
+
 /***/ 213:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(93);
+module.exports = __webpack_require__(85);
 
 
 /***/ }),
 
-/***/ 83:
-/***/ (function(module, exports) {
-
-function webpackEmptyContext(req) {
-	throw new Error("Cannot find module '" + req + "'.");
-}
-webpackEmptyContext.keys = function() { return []; };
-webpackEmptyContext.resolve = webpackEmptyContext;
-module.exports = webpackEmptyContext;
-webpackEmptyContext.id = 83;
-
-
-/***/ }),
-
-/***/ 84:
+/***/ 57:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -744,8 +720,8 @@ var AppComponent = (function () {
 AppComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["b" /* Component */])({
         selector: 'app-root',
-        template: __webpack_require__(170),
-        styles: [__webpack_require__(158)]
+        template: __webpack_require__(179),
+        styles: [__webpack_require__(167)]
     })
 ], AppComponent);
 
@@ -753,16 +729,30 @@ AppComponent = __decorate([
 
 /***/ }),
 
-/***/ 93:
+/***/ 84:
+/***/ (function(module, exports) {
+
+function webpackEmptyContext(req) {
+	throw new Error("Cannot find module '" + req + "'.");
+}
+webpackEmptyContext.keys = function() { return []; };
+webpackEmptyContext.resolve = webpackEmptyContext;
+module.exports = webpackEmptyContext;
+webpackEmptyContext.id = 84;
+
+
+/***/ }),
+
+/***/ 85:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(98);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_app_module__ = __webpack_require__(204);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_ng1_app__ = __webpack_require__(208);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_app_component__ = __webpack_require__(84);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__main_ng1__ = __webpack_require__(212);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_app_module__ = __webpack_require__(100);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_ng1_app__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_app_component__ = __webpack_require__(57);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__main_ng1__ = __webpack_require__(108);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_core__ = __webpack_require__(1);
 
 
