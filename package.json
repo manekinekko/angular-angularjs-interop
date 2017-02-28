@@ -8,7 +8,7 @@
         "test": "ng test",
         "lint": "ng lint",
         "e2e": "ng e2e",
-        "aot": "ngc -p src/tsconfig.json",
+        "aot": "ngc -p src/tsconfig.app.json",
         "build": "ng build -bh /angular-angularjs-interop/",
         "ship": "git subtree push --prefix dist origin gh-pages"
     },
