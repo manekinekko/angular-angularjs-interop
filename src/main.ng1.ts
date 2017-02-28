@@ -20,9 +20,11 @@ export const downgradeNg2RootComponentToNg1 = (rootComponent) => {
         const injector = platformRef.injector.get(UpgradeModule) as UpgradeModule;
 
         // use it to bootstrap AngularJs
-        injector.bootstrap(document.body, [Ng1AppModule.name], {strictDi: true});
+        // make sure to wait untill Ng1AppModule is full loaded
+        setTimeout(_ => injector.bootstrap(document.body, [Ng1AppModule.name], {strictDi: true}), 100);
 
         // sync up location and routings 
+        // @todo the router is not working 
         // setUpLocationSync(upgrade);
         res();
 

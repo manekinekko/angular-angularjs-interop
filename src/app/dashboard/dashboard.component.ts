@@ -9,8 +9,11 @@ export class DashboardComponent implements OnInit {
 
   ng2Data = {
     name: 'Angular',
-    version: 'X'
+    date: new Date(),
+    random: 0
   };
+
+  ng1Data = {};
 
   constructor() {
   }
@@ -18,9 +21,16 @@ export class DashboardComponent implements OnInit {
   ngOnInit() {
   }
 
+  sendRandomNg1Data() {
+    this.ng2Data = {
+      name: 'Angular',
+      date: new Date(),
+      random: Math.random()
+    };
+  }
+
   ng2Fire(data: any) {
-    debugger;
-    console.log(data);
+    this.ng1Data = data;
   }
 
 }

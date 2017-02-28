@@ -14,14 +14,20 @@
         "main": "main.ts",
         "polyfills": "polyfills.ts",
         "test": "test.ts",
-        "tsconfig": "tsconfig.json",
+        "tsconfig": "tsconfig.app.json",
+        "testTsconfig": "tsconfig.spec.json",
         "prefix": "app",
         "styles": [
-            "styles.css"
+            "styles.css",
+            "../node_modules/angular-material/angular-material.min.css"
         ],
         "scripts": [
             "../node_modules/angular/angular.min.js",
-            "../node_modules/angular-route/angular-route.min.js"
+            "../node_modules/angular-route/angular-route.min.js",
+            "../node_modules/angular-animate/angular-animate.min.js",
+            "../node_modules/angular-aria/angular-aria.min.js",
+            "../node_modules/angular-material/angular-material.min.js",
+            "../node_modules/angular-messages/angular-messages.min.js"
         ],
         "environmentSource": "environments/environment.ts",
         "environments": {
@@ -35,12 +41,13 @@
         }
     },
     "lint": [{
-            "files": "src/**/*.ts",
-            "project": "src/tsconfig.json"
+            "project": "src/tsconfig.app.json"
         },
         {
-            "files": "e2e/**/*.ts",
-            "project": "e2e/tsconfig.json"
+            "project": "src/tsconfig.spec.json"
+        },
+        {
+            "project": "e2e/tsconfig.e2e.json"
         }
     ],
     "test": {

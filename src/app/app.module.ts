@@ -11,20 +11,26 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 
 import { HybridUrlHandlingStrategy, UrlHandlingStrategy } from './upgrade/url-handling-strategy';
-import { HomeDirective } from './home/home.directive';
+
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NotfoundComponent } from './notfound/notfound.component';
+
+import { DashboardDirective } from './upgrade/dashboard.directive';
+import { DatePickerDirective } from './upgrade/date-picker.directive';
+import { DebugComponent } from './debug/debug.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    HomeDirective,
+    DashboardDirective,
     DashboardComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    DatePickerDirective,
+    DebugComponent
   ],
   entryComponents: [
-    /** add upgraded AngularJs components here */
+    /** add downgraded Angular components here */
     AppComponent
   ],  
   imports: [
@@ -35,7 +41,7 @@ import { NotfoundComponent } from './notfound/notfound.component';
     RouterModule.forRoot([
       {path: 'home', component: HomeComponent},
       {path: 'dash', component: DashboardComponent},
-      // {path: '', redirectTo: '/home', pathMatch: 'full'},
+      {path: '', redirectTo: '/dash', pathMatch: 'full'},
       {path: '**', component: NotfoundComponent}
     ], {
       enableTracing: true,

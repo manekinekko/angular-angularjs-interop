@@ -7,9 +7,14 @@ import { downgradeNg2RootComponentToNg1 } from './main.ng1';
 import { enableProdMode } from '@angular/core';
 enableProdMode();
 
-// 1) bootstrap Angular Injector (ei. AppModule)
-platformBrowserDynamic().bootstrapModule(AppModule).then(platformRef => {
+// 1) bootstrap Angular Injector (ie. AppModule)
+try {
+  platformBrowserDynamic().bootstrapModule(AppModule).then(platformRef => {
 
-  // 2) bootstrap AngularJs Injector and wire the two up.
-  downgradeNg2RootComponentToNg1(AppComponent).bootstrapModuleAngularJs(platformRef, Ng1AppModule);
-});
+    // 2) bootstrap AngularJs Injector and wire the two up.
+      downgradeNg2RootComponentToNg1(AppComponent).bootstrapModuleAngularJs(platformRef, Ng1AppModule);
+  });
+}
+catch(e) {
+  console.log('error happened when trying to get the $COMPILE from injector');
+}

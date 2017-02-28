@@ -2,4 +2,12 @@
     dashboard home from angular (>=2)
 </p>
 
-<ng1-home [ng1Data]="ng2Data" (ng1Event)="ng2Fire($event)"></ng1-home>
+
+<ng1-dashboard [ng1Data]="ng2Data" (ng1Event)="ng2Fire($event)">
+    <section>
+        <p>Dashboard from AngularJs (transcluded)</p>
+        <button (click)="sendRandomNg1Data()">random data</button>
+        <pre>{{ ng1Data | json }}</pre>
+    </section>
+    <ng1-date-picker></ng1-date-picker>
+</ng1-dashboard>
