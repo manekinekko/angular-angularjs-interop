@@ -50,7 +50,7 @@ export class DebugComponent implements OnInit {
     this.d = [];
     this.loop(this.w.document.body, this.d);
     this.d.map( d => {
-      // if (d.tagName !== 'APP-DEBUG' && d.tagName !== 'APP-ROOT') {
+      if (d.tagName !== 'APP-DEBUG' && d.tagName !== 'APP-ROOT') {
         d.classList.add('__debug');
         if (d.tagName === 'NG-TRANSCLUDE') {
           d.style.backgroundColor = this.colors['ng-transclude'];
@@ -64,7 +64,7 @@ export class DebugComponent implements OnInit {
           d.style.backgroundColor = this.colors['ng1'];
           d.style.borderColor = this.colors['ng1'];
         }
-      // }
+      }
     });
   }
 

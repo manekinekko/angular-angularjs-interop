@@ -1,1 +1,0 @@
-(function(a) { a.module("ngMarquee", []).directive("ngMarquee", ["$parse", function(a) { return { restrict: "E", scope: { options: "=ngOptions" }, link: function(a, b) { b.marquee(a.options) } } }]) })(angular);

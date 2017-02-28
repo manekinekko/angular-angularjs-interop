@@ -17,4 +17,5 @@ try {
 }
 catch(e) {
   console.log('error happened when trying to get the $COMPILE from injector');
+  console.error(e);
 }

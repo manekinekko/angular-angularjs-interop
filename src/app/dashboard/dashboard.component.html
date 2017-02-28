@@ -1,13 +1,16 @@
 <p>
-    dashboard home from angular (>=2)
+    dashboard content in angular
+    <button (click)="sendRandomNg1Data()">send input to AngularJS (input)</button>
 </p>
+
+<b>Output (from AngularJs):</b>
+<pre>{{ ng1Data | json }}</pre>
 
 
 <ng1-dashboard [ng1Data]="ng2Data" (ng1Event)="ng2Fire($event)">
+    <p>Content in Angular, transcluded into AngularJs</p>
     <section>
-        <p>Dashboard from AngularJs (transcluded)</p>
-        <button (click)="sendRandomNg1Data()">random data</button>
-        <pre>{{ ng1Data | json }}</pre>
+        <button (click)="sendRandomNg1Data()">send input to AngularJS (input / transclusion)</button>
     </section>
     <ng1-date-picker></ng1-date-picker>
 </ng1-dashboard>

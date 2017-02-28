@@ -3,13 +3,14 @@ import 'angular-route';
 
 class DashboardController {
   ng1Data = {} as any;
+  click = 0;
   static $inject = ['Ng1Service'];
   constructor(service) {
     this.ng1Data.foo = service.foo();
   }
   ng1Event(...args){}
   fire() {
-    this.ng1Event({data: this.ng1Data, ng1: true, transclude: true});
+    this.ng1Event({data: this.ng1Data, ng1: true, transclude: true, click:this.click++});
   }
 }
 
@@ -36,11 +37,12 @@ const yoloApp = angular.module('yolo-app', ['ngMaterial', 'ngMessages'])
     'text': '?text-slot'
   },
   template: `
-    <ng-transclude ng-transclude-slot="date-picker">[ng-transclude-slot="date"]</ng-transclude>
-    <button ng-click="$ctrl.fire()">fire 🌶</button>
-    <b>Input (from Angular):</b> {{ $ctrl.ng1Data | json }}
-    <ng-transclude ng-transclude-slot="text">[ng-transclude-slot="text"]</ng-transclude>
+    <b>Input (from Angular):</b> 
     <ng-transclude></ng-transclude>
+    <ng-transclude ng-transclude-slot="date-picker">[ng-transclude-slot="date"]</ng-transclude>
+    <ng-transclude ng-transclude-slot="text">[ng-transclude-slot="text"]</ng-transclude>
+    <button ng-click="$ctrl.fire()">send event to Angular (output)</button>
+    <pre>{{ $ctrl.ng1Data | json }}</pre>
     `,
   controller: DashboardController
 })
