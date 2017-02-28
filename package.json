@@ -9,7 +9,8 @@
         "lint": "ng lint",
         "e2e": "ng e2e",
         "aot": "ngc -p src/tsconfig.json",
-        "build": "ng build -bh /angular-angularjs-interop/"
+        "build": "ng build -bh /angular-angularjs-interop/",
+        "ship": "git subtree push --prefix dist origin gh-pages"
     },
     "private": true,
     "dependencies": {
